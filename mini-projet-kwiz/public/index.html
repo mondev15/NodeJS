@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kwizzz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Styles and Scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Socket.io scripts (from node module)-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/kwiz.js"></script>
+
+    <!-- Custom Styles and Scripts -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron" style="text-align:center;">
+        <h1>Kwizzz</h1>
+        <p>Interactive and Multi-User Quizz.</p>
+    </div>
+    <div id="global">
+        <div id="pseudo"></div>
+        <div id="users"></div>
+    </div>
+    <!-- Main content. WARNING, DO NOT ADD ELEMENT IN THERE IT WILL BE DELETED -->
+    <div id="content" class="row">
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Pseudo</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody id="tableclients">
+        </tbody>
+    </table>
+
+</div>
+
+
+<footer id="site-footer" class="contain well">
+    <span class="col-xs-6 pull-right text-right">Copyright &copy;KWIZZZ 2017</span>
+</footer>
+
+<script language="javascript">
+
+    window.onload = function (e) {
+        kwiz.start();
+    }
+</script>
+
+</body>
+</html>
